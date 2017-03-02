@@ -1,0 +1,56 @@
+.addAnimationPanel {
+    position: absolute;
+    left: 10%;
+    width: 800px;
+    top: 100px;
+    z-index: 99999;
+}
+#addAnimationPanel {
+min-height: 600px;
+}
+.addAnimationPanelContent {
+    position: relative;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.expand {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+
+.expanded {
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+
+min-height: 900px;
+}
+
+.addItemVertical {
+    background: #eee;
+    margin-bottom: 25px;
+}
+.addItemVertical > li > a {
+    border-left: 4px solid #555;
+    font-size: 15px !important;
+    line-height: 1.42857143;
+    color: #fff !important;
+    background-color: #BBB !important;
+}
+.addItemVertical > li.active > a {
+    border-left: none;
+    font-size: 15px !important;
+    line-height: 1.42857143;
+    color: #fff !important;
+    background-color: #337ab7 !important;
+}

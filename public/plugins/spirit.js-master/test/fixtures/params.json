@@ -1,0 +1,16 @@
+{
+	"params": [
+		{
+			"param": "x",
+			"value": -50
+		},
+		{
+			"param": "y",
+			"value": -400
+		},
+		{
+			"param": "left",
+			"value": 100
+		}
+	]
+}

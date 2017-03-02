@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.row {
+  position: relative;
+}
+
+.panel {
+    height: 50px;
+}
+.layout-panels{float: left;
+  border-radius: 15px;}
+.layout-handles{float: left;
+  border-radius: 15px;}
+
+.resize-bar {
+  position:absolute;
+  height: 14px;
+  width: 14px;
+  top: 0;
+  left: 0;
+  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
+
+  z-index: 999;
+    float: left;
+}
+
+.resize-bar-column {
+  height: 50px;
+}
+
+#panel-0 {
+  background: #FF93d8;
+}
+#panel-1 {
+  background: #ce93d8;
+}
+
+#panel-2 {
+  background: #80deea;
+}
+
+#panel-3 {
+  background: #a5d6a7;
+}
+
+#panel-4 {
+  background: #ffcc80;
+}
+#panel-5 {
+  background: #ffcc33;
+}
+#panel-6 {
+  background: #FF93d8;
+}

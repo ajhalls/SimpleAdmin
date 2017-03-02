@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>TimeSlider Demo</title>
+	<meta name="description" content="TimeSlider Plugin for jQuery">
+	<meta name="keywords" content="timeslider, time-slider, time slider, rangeslider, range-slider, range slider, jquery, javascript">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   
+
+	<link href="../css/timeslider.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<h3 id="version"></h3>
+	<div style="margin: 50px 30px;">
+		<p>With standard options</p>
+		<p>Zoom 1...48 hours:</p>
+        <div id="zoom-slider123" style="width:300px;margin-bottom:10px;"></div>
+		<div id="slider123" class="time-slider"></div>
+	</div>
+	<p id="messages"></p>
+	<div class="btn btn-primary btn-sm Add">Add</div>
+	<div class="btn btn-primary btn-sm Remove">Remove</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="../js/timeslider.js"></script>
+	<script type="text/javascript">
+        var current_time = (new Date()).getTime() + ((new Date()).getTimezoneOffset() * 60 * 1000 * -1);
+
+				
+				$('#zoom-slider123').slider({
+					min: 1,
+					max: 48,
+					value: 24,
+					step: 0.2,
+					slide: function(event, ui) {
+						$('#slider123').TimeSlider({hours_per_ruler: ui.value});
+					}
+				});
+
+
+
+			var ts = new TimeSlider( $('#slider123'), {
+					start_timestamp: current_time - 3600 * 12 * 1000,
+					init_cells: [
+						{
+                            '_id': 'c1',
+                            'start': (current_time - (3600 * 5.4 * 1000) + 1234),
+                            'stop': current_time - 3600 * 3.2 * 1000,
+                            'style': {
+                                'background-color': '#76C4FF'
+                            }
+                        },
+						{
+                            '_id': 'c2',
+                            'start': (current_time - (3600 * 2.1 * 1000))
+                        }
+					]
+				});
+			$(".Remove").click(function () {
+				ts.remove_timecell("c1");
+			});
+
+			$(".Add").click(function () {
+				ts.add_timecell({
+                            '_id': 'c3',
+                            'start': (current_time - (3600 * 5.4 * 1000) + 1234),
+                            'stop': current_time - 3600 * 3.2 * 1000,
+                            'style': {
+                                'background-color': '#76C4FF'
+                            }
+                        });
+			});
+
+
+
+	</script>
+</body>
+</html>

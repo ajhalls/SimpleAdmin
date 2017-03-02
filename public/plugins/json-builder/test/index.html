@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	<title>json-builder</title>
+	
+	<link rel="stylesheet" href="../css/json-builder.css">
+
+	<style>
+	body {
+		font: 14px Arial, sans-serif;
+		margin: 0;
+	}
+	#wrap {
+		margin: 0 auto;
+		width: 840px;
+	}
+	#form {
+		border-right: 1px solid #eee;
+		float: left;
+		min-height: 1px;
+		padding: 50px 40px 100px 0;
+		width: 280px;
+	}
+	#output {
+		border: 0;
+		float: left;
+		font-size: 12px;
+		height: 3200px;
+		margin-top: 50px;
+		margin-left: 40px;
+		padding: 16px 0;
+		outline: 0;
+		resize: none;
+		width: 460px;
+	}
+	</style>
+
+	</head>
+	<body>
+
+	<div id="wrap">
+		<form id="form"></form>
+		<textarea id="output"></textarea>
+	</div>
+	
+	<script src="js/handlebars.runtime.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+
+	<script src="../src/builder.js"></script>
+	<script src="../src/builder.templates.js"></script>
+
+	<script>
+	$(function() {
+		var form = $("#form");
+		var builder = new Builder(form);
+
+		$.ajax({
+		  dataType: "json",
+			url: "json/schema.json",
+			cache: false,
+			success: function(data) {
+				builder.init(data, function() {
+					console.log("Callback triggered.");
+				});
+				$.ajax({
+					dataType: "json",
+					url: "json/resume.json",
+					cache: false,
+					success: function(data) {
+						builder.setFormValues(data);
+					}
+				});
+			}
+		});
+
+		var output = $("#output");
+		form.on("change", function() {
+			var json = builder.getFormValuesAsJSON();
+			if (output.val() !== json) {
+				output.val(json);
+			};
+		});
+
+		var timer = null;
+		output.on("keyup", function() {
+			clearTimeout(timer);
+			timer = setTimeout(function() {
+				try {
+					var text = output.val();
+					builder.setFormValues(JSON.parse(text));
+				} catch(e) {
+					// ..
+				}
+			}, 200);
+		});
+	});
+	</script>
+	
+	</body>
+</html>

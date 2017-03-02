@@ -1,0 +1,40 @@
+
+
+#canvas {
+  user-select: none;
+  // border: 1px solid black;
+  width: 600px;
+  height: 405px;
+  position:absolute;
+  left:140px;
+  top:-15px;  
+}
+
+.path-data-container { 
+ width: 700px;
+  height: 405px;
+  position:absolute;
+  top:400px;
+}
+.easingEditorButtons{
+
+  top:35px;  
+ width: 190px;
+  height: 405px;
+  position:absolute;
+}
+
+.easingEditorButtonsList > li > a {
+    border-left: 4px solid #555;
+    font-size: 13px !important;
+    line-height: 1.42857143;
+    color: #fff !important;
+    background-color: #BBB !important;
+}
+.easingEditorButtonsList > li.active > a {
+    border-left: none;
+    font-size: 13px !important;
+    line-height: 1.42857143;
+    color: #fff !important;
+    background-color: #337ab7 !important;
+}

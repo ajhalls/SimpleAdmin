@@ -1,0 +1,32 @@
+{
+	"transitions": [
+		{
+			"frame": 0,
+			"ease": "Linear.easeNone",
+			"params": [
+				{
+					"param": "x",
+					"value": -50
+				},
+				{
+					"param": "y",
+					"value": -400
+				}
+			]
+		},
+		{
+			"frame": 200,
+			"ease": "Linear.easeNone",
+			"params": [
+				{
+					"param": "x",
+					"value": 100
+				},
+				{
+					"param": "y",
+					"value": 400
+				}
+			]
+		}
+	]
+}

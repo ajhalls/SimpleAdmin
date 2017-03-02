@@ -1,0 +1,297 @@
+.timeline-container{
+    position: relative;
+}
+.scrubberHandle{
+    left:0px;
+
+    margin-left:15px;
+    float:left;
+    position: absolute;
+    top:-5px;
+    background: transparent;
+    text-align: center;
+    display: inline;
+    cursor: crosshair;    
+    z-index: 99999;    
+}
+.scrubber-icon {
+    float:left;
+    color:#F00;
+    position:relative;
+	font-size: 22px;
+    top:-5px;
+    left: 0px;
+    z-index: 9999999;
+}
+.fa-sort-up.scrubber-icon{
+    float:left;
+    color:#F00;
+    position:relative;
+    font-size: 22px;
+    top:-15px;
+    left: 0px;
+    z-index: 9999999;
+}
+.scrubber-line {
+    content:"";
+    float:left;
+    position: relative;
+    background:red;
+    left:6px;
+    top:-10px;
+    width:2px;
+    height: 180px;
+    z-index: 9999999;
+    cursor: crosshair;
+    overflow:hidden;
+    padding:0px !important;
+    margin:0px !important;
+}
+.zoomSliderContainer{
+     position: relative;
+   background: #F66;
+}
+.ui-slider {
+    height: 130px !important;
+    }
+.zoomSliderContainer {
+    float: left;
+    min-height: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    width: 1%;
+}
+.timelineNumbers{
+    position:absolute;
+    color:#FFF;
+    width:2px;
+    height:25px;
+    font-size:9px;
+    top:-2px;
+}
+.majorTick{
+    position:absolute;
+    width:3px;
+    height:20px;
+    color:#f00;
+    font-size:20px;
+    top:5px;
+}
+.minorTick{
+    color:#000;
+    position:absolute;
+    width:2px;
+    height:10px;
+}
+.timeline-container-header{
+    position: relative;
+    padding-top: 10px;
+    margin-left:-15px;
+    top:5px;
+	background: #666;
+    height: 30px;
+    z-index: 99;
+}
+.timelineTimingPanel{
+    position:relative;
+    top:5px;
+    left:5px;
+    margin-bottom: 10px;
+}
+.timeline-control-buttons{
+    position:relative;
+    width:100%;
+    height: 30px;
+    padding:0px !important;
+    margin:0px !important;
+}
+.timelineLayers{
+    background: #DDD;
+    width:100%;  
+}
+.timelineElement{
+    background-color: rgb(137, 128, 209);
+    height: 25px;
+    border-radius: 4.45px;
+    border: 1px solid #003eff;
+    z-index: 999;
+    display: table-cell;
+    vertical-align:middle;
+}
+.timelineLayerItem{
+    background-color: #AAA;
+    border-bottom: 1px solid #333;
+    line-height: 25px;
+    display: table-cell;
+    vertical-align:middle;
+}
+.timelineLabels{
+    position:relative;
+    border-bottom: 1px solid #333;
+    vertical-align:middle;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    max-height: 150px;  
+}
+.deleteAnimation{
+    position:relative;
+    top:2px;
+    font-size: 22px;
+}
+.editAnimation{
+    position:relative;
+    top:2px;
+    font-size: 22px;
+}
+#newOptionsAdd{
+    position:relative;
+    top:5px;
+    right:10px;
+    font-size: 22px;  
+}
+
+.timelineElementRow{
+    background-color: #AAA;
+    border-bottom: 1px solid #333;
+    position:relative;
+    height: 26px;
+    left:15px;
+}
+.timeline-btn{
+    padding: .15rem .5rem;
+    font-weight: 900;
+    font-size: 12px;
+    height: 20px;   
+}
+.rightClickMenuTimeline{
+
+    z-index: 999999;
+}
+.KeyframesControlLeft{
+    position:relative;
+    top:5px;
+    min-height: 150px;  
+    background-color: #333;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.timeline-right-panel{
+    float: left;
+    min-height: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    width: 82%;
+    height:150px;
+}
+.timelineHeaderScroll{
+    overflow: hidden;
+}
+.KeyframesControl{
+    min-height: 200px;  
+    background-color: #333;
+}
+.timelineTimingPanelScroll{
+    float: left;
+    min-height: 1px;
+    position: relative;
+    height:150px;
+}
+.jsoneditor-tree {
+background: #fff;
+z-index: 99999;
+}
+.addPrepackaged{
+  position: absolute;
+  z-index: 9999;
+  background: #46494c;
+  border: 6px solid transparent;
+  border-radius: 4.45px;
+  padding-top: 4px;
+}
+.manualEffectAdd{
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%);
+  z-index: 9999;
+  border: 6px solid transparent;
+  border-radius: 4.45px;
+  padding-top: 4px;
+}
+
+.ExpandingTips{
+    position: absolute;
+    left:220px;
+    z-index: 99999;
+    background: #4c5c68;
+    border: 6px solid transparent;
+    border-radius: 4.45px;
+    padding-top: 4px;
+    visibility: hidden; 
+}
+
+.ui-resizable-right {
+    cursor: e-resize;
+    width: 5px;
+    right: -1px;
+    top: 1px;
+    height: 100%;
+    background-color: rgba(255,0,0,.75);
+    height: 20px;
+    z-index: 90;
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    border-radius: 4.45px;
+}
+.ui-resizable-left {
+    cursor: e-resize;
+    width: 5px;
+    left: 0px;
+    top: 1px;
+    height: 100%;
+    background-color: rgba(255,0,0,.75);
+    height: 20px;
+    z-index: 90;
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    border-radius: 4.45px;
+}
+
+.keyframeHandle{
+    width: 0;
+    height: 0;
+    border: 6.4px solid transparent;
+    border-bottom: 10.5px solid #103252;
+    top: -0.5px;
+}
+.keyframeHandle:after {
+    content: '';
+    position: absolute;
+    left: -5.5px; 
+    top: 9px;
+    width: 0;
+    height: 0;
+    border: 5.5px solid transparent;
+    border-top: 10.5px solid #103252;
+}
+.keyframeTooltip{
+    position: absolute;
+    z-index: 99999;
+    background: #5bc0de;
+    color:#FFF;
+    border: 6px solid transparent;
+    border-radius: 20px 20px 20px 0px;
+    padding-top: 4px;
+    visibility: hidden; 
+
+}
+.datGUI{
+    position: absolute;
+    visibility: hidden; 
+}
+

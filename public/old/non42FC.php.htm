@@ -1,0 +1,143 @@
+<?PHP
+include 'header.php';
+include 'topbar.php';
+include('nav.php');
+?>
+<link rel="stylesheet" href="./includes/slider/jquery-ui.min.css">
+<link rel="stylesheet" href="./includes/slider/custom.css">
+<link rel="stylesheet" href="./includes/slider/colpick.css">
+<link rel="stylesheet" href="./includes/animate.css">
+<script src="./includes/slider/jquery-2.1.3.min.js"></script>
+<script src="./includes/slider/jquery-ui.min.js"></script>
+<script src="./includes/slider/colpick.js"></script>
+<link href="./includes/slider/jquery.mobile.custom.structure.min.css" rel="stylesheet" />
+<script src="./includes/slider/jquery.mobile.custom.min.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-rc.1/css/select2.min.css" rel="stylesheet" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-rc.1/js/select2.min.js"></script>
+
+
+<style type="text/css">
+	
+#RGB {
+	height: 20px;
+	background: rgb(128, 128, 128);
+}
+#RC .slider-selection {
+	background: #FF8282;
+}
+#RC .slider-handle {
+	background: red;
+}
+#GC .slider-selection {
+	background: #428041;
+}
+#GC .slider-handle {
+	background: green;
+}
+#BC .slider-selection {
+	background: #8283FF;
+}
+#BC .slider-handle {
+	border-bottom-color: blue;
+}
+#R, #G, #B {
+	width: 300px;
+}
+</style>
+
+
+
+</head>
+<body>
+<div><button class="slide-tabs">Add Slide</button>
+	Height: <input class="canvasSize" type="text" name="canvas-width" value="" size="5">
+	Width:  <input class="canvasSize" type="text" name="canvas-height" value="" size="5">
+</div><br>
+<div><ul class="slide-tabs-container tabs" style="background:repeat-x scroll 50% 50% ;
+    border: 0px solid #aaa;"><li class="pull-left slide-tabs-item slideTab-1"><a class="slide-switch" data-slideId="1" href="#slideKey-1">Slide 1</a></li></ul></div>
+<br><br>
+
+<div class="slider-container"></div>
+
+
+<button class="btn-add-layer">Add Div</button>
+<form method="POST" action="./includes/slider/functions.php">
+<div class="accordion">
+</div>
+
+<br><br>
+<select data-theme="b" class="selectElement" data-bind="jqmFlip:chargeble" data-role="slider">
+    <option value="false">%</option>
+    <option value="true">px</option>
+    </select>
+	<input type="submit">
+</form>
+
+<p><br><p><br></p></p>
+
+
+<p>
+<b>R</b> <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128" data-slider-id="RC" id="R" data-slider-tooltip="hide" data-slider-handle="square" />
+</p>
+<p>
+<b>G</b> <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128" data-slider-id="GC" id="G" data-slider-tooltip="hide" data-slider-handle="round" />
+</p>
+<p>
+<b>B</b> <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128" data-slider-id="BC" id="B" data-slider-tooltip="hide" data-slider-handle="triangle" />
+</p>
+<div id="RGB"></div>
+
+
+
+<script type="text/javascript">
+var RGBChange = function() {
+	$('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
+};
+
+var r = $('#R').slider()
+		.on('slide', RGBChange)
+		.data('slider');
+var g = $('#G').slider()
+		.on('slide', RGBChange)
+		.data('slider');
+var b = $('#B').slider()
+		.on('slide', RGBChange)
+		.data('slider');
+</script>
+
+
+<style type="text/css">
+.draggable-0 {
+  transition: transform 1s easeInOutCubic;
+  transform-origin: top left;
+  transform-style: preserve-3D;
+}
+.box-rotate {
+  transform: rotate(360deg);
+}
+</style>
+
+
+
+<script src="./includes/slider/slider-functions.js"></script>
+<script src="./includes/slider/custom.js"></script>
+<script>
+$(function(){
+
+	$('select').slider();	
+
+	$(".canvasSize").on('keyup mousedown mouseup',(function(e) {
+		canvasWidth = $('[name="canvas-width"]').val();
+		canvasHeight = $('[name="canvas-height"]').val();
+		$('.slider-container').css("width", canvasHeight);
+		$('.slider-container').css("height", canvasWidth);
+	}));
+});
+$( ".slide-tabs-item" ).tabs();
+
+
+</script>
+
+<?PHP
+include 'footer.php';
+?>

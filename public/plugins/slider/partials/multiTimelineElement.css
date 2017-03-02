@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+.MultiTimelineElementRow {
+    position: absolute;
+    height: 25px;
+    width: 60px;
+}
+
+.MultiTimelineRow {
+    position: relative;
+}
+
+.MultiTimelineElement {
+    position: absolute;
+    height: 25px;
+}
+
+
+.MultiTimelinepanel {
+    height: 25px;
+}
+.layout-panels {
+    z-index: 999;
+}
+.layout-handles {
+    float: left;
+    z-index: 9999;
+}
+.resize-bar {
+    position: absolute;
+    height: 24px;
+    width: 14px;
+    top: 0px;
+    left: -5px;
+    background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
+    z-index: 999;
+    float: left;
+}
+.MultiTimelineElementInitial {
+    position: absolute;
+    height: 24px;
+    width: 14px;
+    top: 0px;
+    left: -5px;
+    background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #F00;
+    z-index: 999;
+    float: left;
+}
+.resize-bar-column {
+    height: 25px;
+}
+.multiTimelineElementPanel-0 {
+    background: #D9534F;
+}
+.multiTimelineElementPanel-1 {
+    background: #F0AD4E;
+}
+.multiTimelineElementPanel-2 {
+    background: #5CB85C;
+}
+.multiTimelineElementPanel-3 {
+    background: #0275D8;
+}
+.multiTimelineElementPanel-4 {
+    background: #009999;
+}
+.multiTimelineElementPanel-5 {
+    background: #D9534F;
+}
+.multiTimelineElementPanel-6 {
+    background: #F0AD4E;
+}
+.delayArrow {
+    color: #fff;
+}
+.delayedPanel {
+    background: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 241, 207, 0.7) 19%, rgba(255, 233, 181, 1) 29%, rgba(255, 180, 0, 1) 100%);
+    /* FF3.6-15 */
+    
+    background: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 241, 207, 0.7) 19%, rgba(255, 233, 181, 1) 29%, rgba(255, 180, 0, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 241, 207, 0.7) 19%, rgba(255, 233, 181, 1) 29%, rgba(255, 180, 0, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffb400', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    
+    background-repeat: repeat-y;
+}
+.testGroup{
+.multiTimelineElementPanel-0 {
+    background: #fff;
+}
+.multiTimelineElementPanel-1 {
+    background: #fff;
+}
+.multiTimelineElementPanel-2 {
+    background: #fff;
+}
+.multiTimelineElementPanel-3 {
+    background: #fff;
+}
+}

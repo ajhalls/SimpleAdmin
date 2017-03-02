@@ -1,0 +1,7 @@
+.idea
+.grunt
+_SpecRunner.html
+*.iml
+node_modules
+vendor
+coverage

@@ -1,0 +1,57 @@
+.slider-container{
+position:relative;
+width: 1000px;
+height: 150px;
+background: #eee;
+}
+.item1 {
+width: 50px;
+height: 50px;
+background: #ccc;
+}
+div[class*='sliderLayer-']{
+width: 50px;
+height: 20px;
+position:absolute;
+top:0;
+left:0;
+}
+
+.sortable-accordion { font: 112.5% 'Trebuchet MS', sans-serif; margin: 10px;}
+.sortable { list-style-type: none; margin: 5; padding: 0; width: 60%; }
+.sortable li { margin: 0 8px 8px 8px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 29px; }
+.sortable li span { position: absolute; margin-left: -1.3em; }
+td {font-weight: normal;}
+
+div.ui-slider-switch {
+    display: inline-block;
+    height: 18px;
+    top: 15px;
+    width: 3.8em;
+	font-size: 7px;
+	background-color:#eee;
+	}
+.ui-accordion .ui-accordion-content {
+    border-top: 0 none;
+    overflow: auto;
+    padding: 0 0.2em;
+}
+.pre-line{
+white-space: pre;
+display: inline-block;
+}
+.childElement{
+display: inline-block;
+position:absolute;
+top:0px;
+left:0px;
+height:20px;
+width:30px;
+}
+.childElement > .ui-icon-gripsmall-diagonal-se{
+display: inline-block;
+margin-left:10px;
+}
+#slider-vertical{
+z-index:8000;
+}

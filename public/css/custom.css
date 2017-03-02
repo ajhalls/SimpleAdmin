@@ -1,0 +1,33 @@
+.navbar-minimalize {
+    position: relative;
+    left: -20px;
+}
+.deleteItem{color:#5bc0de; opacity:0.7;vertical-align:5px;line-height:2;}
+.editItem{color:#5bc0de; opacity:0.7;vertical-align:5px;line-height:2;margin-right:10px;}
+.saveConfirmation{width:30%;position:absolute;top:50%;left:35%;z-index:99999}
+.saveConfirmationbackground{width:100%;height:100%;position:absolute;top:0px;left:0px;z-index:9999;background-color:#000;opacity:0.6;}
+tr.odd td {background-color: #ededed;font-size: 15px; }
+tr.even td {font-size: 15px; }
+.dd3-handle::before {color: #fff;content: "=";display: block;font-size: 20px;font-weight: normal;left: 0;position: absolute;text-align: center;text-indent: 0;top: 5px;width: 100%; }
+.dd3-handle {background: none repeat scroll 0 0 #428bca;border: 1px solid #3276b1;box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2) inset;cursor: all-scroll;height: 36px;left: 15px;margin: 0;overflow: hidden;position: absolute;text-indent: 100%;top: 0;white-space: nowrap;width: 34px; z-index: 100; }
+.dd-item, .dd-empty, .dd-placeholder {display: block;font-size: 13px;line-height: 20px;margin: 0;min-height: 20px;padding: 0;position: relative; }
+* {box-sizing: border-box; }
+.dd-list {display: block;list-style: outside none none;margin: 0px 0px 0px 0px;padding: 0;position: relative; }
+.dd {display: block;font-size: 13px;line-height: 20px;list-style: outside none none;margin: 0;max-width: 90%;padding: 0;position: relative; }
+.dd3-content {background: none repeat scroll 0 0 #ffffff;border: 1px solid #dddddd;color: #333333;display: block; height:36px;margin: 5px 0;padding: 0px 10px 0px 40px;text-decoration: none; }
+.panel-info.panel-dark .panel-heading {background: none repeat scroll 0 0 #5bc0de;border-color: #5bc0de;color: #fff; }
+
+body.mini-navbar .navbar-static-side {
+    width: 69px;
+}
+#page-wrapper {
+    margin: 0 0 0 256px;
+}
+.navbar-default {
+    border-color: #2f4050;
+    width: 255px;
+}
+.navbar-brand {
+    font-size: 16px;
+    margin-left: -20px;
+}
