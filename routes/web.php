@@ -21,6 +21,10 @@ Route::post('/updateMenu', 'menuAdmin@updateMenu');
 Route::get('/userAdmin', 'userAdmin@index');
 Route::post('/updateUser', 'userAdmin@updateUser');
 
+Route::get('/categoryAdmin', 'categoryAdmin@index');
+Route::post('/getCategoryItem', 'categoryAdmin@getCategoryItem');
+Route::post('/updateCategory', 'categoryAdmin@updateCategory');
+
 
 Auth::routes();
 

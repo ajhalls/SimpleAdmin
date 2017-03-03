@@ -2,6 +2,7 @@
 use App\Menuitems;
 use App\Greensock;
 use App\Rightclick;
+use App\Categories;
 
 function left_guest_nav() {
 $sqlmenu = Menuitems::where('status', 'ACTIVE')
@@ -28,6 +29,15 @@ $availablemenulist = Menuitems::where('status', 'INACTIVE')
     ->GET();
     return $availablemenulist;
 }
+function left_categories_nav() {
+$categories = Categories::where('status', 'ACTIVE')
+    ->ORDERBY('parent_id', 'ASC')
+    ->ORDERBY('sortorder', 'ASC')
+    ->ORDERBY('name', 'ASC')
+    ->GET();
+    return $categories;
+}
+
 function getLeftnav() {
     if (Auth::guest()) {
         return parseNav(left_guest_nav());

@@ -21,11 +21,11 @@
             "database"
         ],
       "files": [
-            "app/Libraries/functions.php",
-            "app/Libraries/greensockmenufunctions.php"
+            "app/Libraries/functions.php"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Libraries\\": "app/Libraries"
         }
     },
     "autoload-dev": {

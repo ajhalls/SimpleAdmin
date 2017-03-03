@@ -13,6 +13,7 @@ use Libraries\functions;
             <ul class="nav" id="side-menu">
 
 			{{ printNav(getLeftnav()) }}
+            {{ printNav(parseNav(left_categories_nav())) }}
 		 <!-- / .navigation -->
 
                         @if (Auth::guest())

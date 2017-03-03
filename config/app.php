@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Slider Builder',
+    'name' => 'HolyCow',
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://www.css.ink'),
+    'url' => env('APP_URL', 'http://www.holycow.io'),
 
     /*
     |--------------------------------------------------------------------------
